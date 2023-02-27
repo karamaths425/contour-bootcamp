@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      } 
+      li{
+        text-align: end;
+      }
+      #myBtn{
+        display: flex;
+        margin: auto;
+      }
+      #card-data{
+        display: none;
+      }
+      #dcard i,p{
+        display: flex;
+        flex-direction: column;
+      }
+      .logo{
+              align-items: center;
+              display: flex;
+           }
+      @media screen and (max-width: 394px) {
+       
+          
+      }
+    
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+
+      <!-- menu bar section start-->
+
+        <div class="row bg-primary text-white">
+          <div class="col-5">
+              <h5><i class="bi bi-person-rolodex fa-10x"></i>Cloud Contact</h5>
+          </div>
+            <div class="col-7">
+              <ul>
+                  <li>Hello Sultans Dine</li>
+                  <li><i class="bi bi-box-arrow-right"></i>Logout</li>
+                </ul>
+            </div>         
+        </div>
+
+        <!-- menu bar section end -->
+
+        <!-- main boday section start -->
+
+        <div class="row m-5">
+            <div class="col-md-6">
+                <h3 class="text-center text-primary">Add Contact</h3>
+                <form action=" ">
+                <div class="form-group">
+                <input class="form-control" id="name" type="text" placeholder="Name" aria-label=".form-control-lg example"><br>
+                <span id="name-error" class="text-danger"></span><br>
+                <input class="form-control" id="email" type="text" placeholder="Email" aria-label="default input example"><br>
+                <span id="email-error" class="text-danger"></span><br>
+                <input class="form-control" id="phone" type="text" placeholder="Phone" aria-label=".form-control-sm example"><br>
+                <span id="phone-error" class="text-danger"></span><br>
+                <input class="form-control" id="cnic" type="text" placeholder="Cnic" aria-label=".form-control-sm example"><br>
+                <span id="cnic-error" class="text-danger"></span><br>
+                <h4>Contact Type</h4>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Personal">
+                    <label class="form-check-label" for="inlineRadio1">Personal</label>
+                </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Professional">
+                    <label class="form-check-label" for="inlineRadio2">Professional</label>
+                  </div><br><br>
+                <figure style="text-align: center;">
+                  <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:300px;height:142px;">
+                  <figcaption>My-img.jpg</figcaption>
+                </figure><br>
+                <button type="button" id="AddCard">Click To Add Card</button>
+                <!-- <input type="submit" id="myBtn" class="btn btn-primary"> -->
+                <!-- <button type="button" id="myBtn" onclick="contact()" class="btn btn-primary my-2">Click to Add Contact</button> -->
+                </div>
+              </form>
+
+                <div class="col-12 card mb-3 mt-3 " id="card-data">
+                  <div class="row g-0">
+                    <div class="col-9 xs1">
+                      <div id="dcard" class="card-body">
+                        <h5 id="cname" class="card-title text-primary"></h5>
+                        <i class="bi bi-envelope"></i><p id="cemail" class="card-text"></p>
+                        <i class="bi bi-telephone-fill"></i><p id="cphone" class="card-text"></p>
+                        <i class="bi bi-person-vcard-fill"></i><p id="ccnic" class="card-text"></p>
+                        <button type="button" class="btn btn-dark">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                      </div>
+                    </div>
+                    <div class="col-3 mt-4 d-flex flex-column">
+                      <button id="per-pro" type="button" class="btn btn-primary mb-3 p-0"></button>
+                      <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" >
+                    </div>
+                  </div>
+              </div>
+            </div>       
+
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Filter contacts..." aria-label=".form-control-lg example"><br>
+                 
+                <!-- Card 1 Starts -->
+
+                   <div class="card mb-3">
+                        <div class="row g-0">
+                          <div class="col-9 xs1">
+                            <div class="card-body">
+                                <div class="Card-Data d-flex flex-column">
+                                    <h5 class="card-title text-primary">Ishan Sarker</h5>
+                                    <p class="card-text d-inline"><i class="bi bi-envelope"></i> ishan@gmail.com</p>
+                                    <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i> 084677863464</p>
+                                    <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i> 82203-8732221-5</p>
+                                </div>
+                                <div class="Card_button mt-2">
+                                    <button type="button" class="btn btn-dark">Edit</button>
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                </div>                          
+                            </div>
+                          </div>
+                          <div class="col-3 mt-4 xs2">
+                            <button type="button" class="btn btn-primary mb-3">Personal</button>
+                            <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+                          </div>
+                        </div>
+                    </div>
+
+                <!-- Card 1 end -->
+
+                <!-- Card 2 Starts -->
+
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-9 xs1">
+                                <div class="card-body">
+                                    <div class="Card-Data d-flex flex-column">
+                                        <h5 class="card-title text-primary">Erafi Sarker</h5>
+                                        <p class="card-text d-inline"><i class="bi bi-envelope"></i> erafi@gmail.com</p>
+                                        <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i> 084589346348</p>
+                                        <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i> 82203-8732221-5</p>
+                                    </div>   
+                                    <div class="Card_button mt-2">
+                                        <button type="button" class="btn btn-dark">Edit</button>
+                                        <button onclick="deleteCard()" type="button" class="btn btn-danger delete-button">Delete</button>
+                                    </div> 
+                                </div>
+                              </div>
+                              <div class="col-3 mt-4 xs2">
+                                <button type="button" class="btn btn-success mb-3">Professional</button>
+                                <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+                              </div>
+                            </div>
+                        </div>
+
+                    <!-- Card 2 End     -->
+
+                    <!-- <div class="container-fluid">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-7">
+                                <div class="card-body">
+                                  <h5 class="card-title text-primary">John Doe</h5>
+                                  <p class="card-text"><i class="bi bi-envelope"></i> jdoe@gmail.com</p>
+                                  <p class="card-text"><i class="bi bi-telephone-fill"></i> 0978776482636</p>
+                                  <button type="button" class="btn btn-dark">Edit</button>
+                                  <button onclick="deleteCard()" type="button" class="btn btn-danger">Delete</button>
+                                </div>
+                              </div>
+                              <div class="col-5 mt-4">
+                                <button type="button" class="btn btn-success mb-3">Professional</button>
+                                <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" >
+                              </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div id="CARD"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+      function contact(){
+      let a = document.getElementById("name").value;
+      let b = document.getElementById("email").value;
+      let c = document.getElementById("phone").value;
+      let d = document.getElementById("cnic").value;
+      let e = document.getElementsByName("inlineRadioOptions");
+
+      var card = document.createElement("div");
+              card.classList.add("card");
+              card.innerHTML = `
+              <div class="ccard mb-3">
+                        <div class="row g-0">
+                              <div class="col-9 xs1">
+                                <div class="card-body">
+                                    <div class="Card-Data d-flex flex-column">
+                                        <h5 class="card-title text-primary">${a}</h5>
+                                        <p class="card-text d-inline"><i class="bi bi-envelope"></i>${b}</p>
+                                        <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i>${c}</p>
+                                        <p class="card-text d-inline"><i class="bi bi-telephone-fill"></i>${d}</p>
+                                    </div>   
+                                    <div class="Card_button mt-2">
+                                        <button type="button" class="btn btn-dark">Edit</button>
+                                        <button onclick="deleteCard()" type="button" class="btn btn-danger delete-button">Delete</button>
+                                    </div> 
+                                </div>
+                              </div>
+                              <div class="col-3 mt-4 xs2">
+                                <button type="button" class="btn btn-success mb-3">${e}</button>
+                                <img class="img-fluid" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+                              </div>
+                        </div>
+                </div>
+                    `;
+                    let NewCardd = document.getElementById("CARD");
+                    NewCardd.appendChild(card);
+      
+    }
+    var addCardButton = document.getElementById("AddCard");
+    addCardButton.addEventListener("click", contact);
+    //   document.getElementById("myBtn").addEventListener("click", contact);
+    function deleteCard() {
+  // Find the first card element on the page
+   const Cardd = document.querySelector('.ccard');
+
+  // If a card element is found, remove it from the DOM
+  if (Cardd) {
+    Cardd.remove();
+  }
+}
+
+
+    </script>
+</body>
+</html>
